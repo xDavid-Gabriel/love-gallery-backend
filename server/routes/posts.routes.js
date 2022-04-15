@@ -6,6 +6,7 @@ import {
   deletePost,
   getPost,
 } from "../controllers/posts.controllers.js";
+//coment
 const router = Router();
 
 router.get("/posts", getPosts);
