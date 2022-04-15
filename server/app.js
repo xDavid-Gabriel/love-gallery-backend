@@ -1,7 +1,7 @@
 import express,{json} from "express"
 import fileUpload from "express-fileupload"
 import postRoutes from "./routes/posts.routes.js";
-import cors  from "cors" 
+import cors from "cors" 
 
 //Express
 const app = express()
