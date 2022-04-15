@@ -1,7 +1,4 @@
-import dotenv from "dotenv"
 
-//Dotenv
-dotenv.config()
 
 export const MONGODB_URL_DEV = process.env.MONGODB_URL_DEV
 export const MONGODB_URL = process.env.MONGODB_URL
