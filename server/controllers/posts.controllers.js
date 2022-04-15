@@ -62,11 +62,12 @@ export const updatePost = async (req, res) => {
         public_id: result.public_id,
       };
     }
-     const updatePost = await Post.findByIdAndUpdate(id, req.body,  {
+     const updatePost = await Post.findByIdAndUpdate(id, {$set:req.body},  {
       new: true,
     });
   console.log(updatePost);
-    return res.send(updatePost).json(updatePost);
+    // return res.send(updatePost).json(updatePost);
+    return res.json(updatePost);
 
   } catch (error) {
     return res.status(500).json({ message: error.message });
