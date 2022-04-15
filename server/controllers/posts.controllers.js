@@ -47,8 +47,8 @@ export const createPost = async (req, res) => {
 export const updatePost = async (req, res) => {
   try {
     const { id } = req.params;
-    //  let post = await Post.findById(req.params.id)
-    //  await deleteImage(post.image.public_id);
+     let post = await Post.findById(req.params.id)
+     await deleteImage(post.image.public_id);
      // TODO: validar req.body antes de actualizar
 
      // si se sube una nueva imagen subirla a cloudinary
@@ -62,7 +62,7 @@ export const updatePost = async (req, res) => {
         public_id: result.public_id,
       };
     }
-     const updatePost = await Post.findByIdAndUpdate(id, {$set:req.body},  {
+     const updatePost = await Post.findByIdAndUpdate(id, req.body,  {
       new: true,
     });
   console.log(updatePost);
