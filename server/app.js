@@ -1,13 +1,13 @@
 import express,{json} from "express"
 import fileUpload from "express-fileupload"
 import postRoutes from "./routes/posts.routes.js";
-import CORS  from "cors" 
+import cors  from "cors" 
 
 //Express
 const app = express()
 
 //Middlewares
-app.use(CORS())
+app.use(cors())
 app.use(json())
 app.use(fileUpload({
     useTempFiles:true,
